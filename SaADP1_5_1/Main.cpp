@@ -4,7 +4,7 @@
 
 int main()
 {
-	Node* pRoot = new Node;
+	Node* pRoot;
 	init(pRoot);
 	workWithUser(pRoot);
 }
