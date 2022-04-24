@@ -56,7 +56,8 @@ void workWithUser(Node*& pRoot)
 		case(BuildTree):
 		{
 			std::cout << "   Number of tree nodes" << std::endl;
-			if (int n = userInput() > 0) { addNode(pRoot, n); break; }
+			int n = userInput();
+			if ( n >= 0) { addNode(pRoot, n); break; }
 			else std::cout << "   The number of nodes cannot be < 0." << std::endl;
 			break;
 		}

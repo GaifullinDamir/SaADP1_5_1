@@ -36,9 +36,10 @@ void showSymmetrical(Node* pCurrent, int level)
 {
 	if (pCurrent != nullptr)
 	{
-		for (int i = 0; i < level; i++) { std::cout << "     "; }
+		level++;
 		showSymmetrical(pCurrent->left, level);
-		std::cout << pCurrent->data << std::endl; level++;
+		for (int i = 0; i < level-1; i++) { std::cout << "     "; }
+		std::cout << pCurrent->data << std::endl; 
 		showSymmetrical(pCurrent->right, level);
 	}
 }
@@ -47,10 +48,11 @@ void showReverseSymmetrical(Node* pCurrent, int level)
 {
 	if (pCurrent != nullptr)
 	{
-		for (int i = 0; i < level; i++) { std::cout << "     "; }
-		showReverseSymmetrical(pCurrent->left, level);
+		level++;
 		showReverseSymmetrical(pCurrent->right, level);
-		std::cout << pCurrent->data << std::endl; level++;
+		for (int i = 0; i < level-1; i++) { std::cout << "     "; }
+		std::cout << pCurrent->data << std::endl;
+		showReverseSymmetrical(pCurrent->left, level);
 	}
 }
 
