@@ -56,3 +56,12 @@ void showReverseSymmetrical(Node* pCurrent, int level)
 	}
 }
 
+void treeClearMemory(Node*& pCurrent)
+{
+	if (pCurrent != nullptr)
+	{
+		treeClearMemory(pCurrent->left);								//Очистка памяти при помощи обратного обхода
+		treeClearMemory(pCurrent->right);
+		delete pCurrent;
+	}
+}

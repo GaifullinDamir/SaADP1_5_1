@@ -7,4 +7,5 @@ int main()
 	Node* pRoot;
 	init(pRoot);
 	workWithUser(pRoot);
+	treeClearMemory(pRoot);
 }

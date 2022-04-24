@@ -11,3 +11,4 @@ void addNode(Node*& pRoot, int n);
 void showForward(Node* pRoot, int level);
 void showSymmetrical(Node* pRoot, int level);
 void showReverseSymmetrical(Node* pCurrent, int level);
+void treeClearMemory(Node*& pCurrent);
